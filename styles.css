@@ -1,0 +1,192 @@
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f1e7; /* beige claro */
+    color: #3e2c23; /* café medio para el texto */
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #5c4033; /* café oscuro */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #d6a95b;
+  }
+  
+  /* Banner */
+  .banner {
+    background-image: url('img/inicio.avif'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .Titulo_inicial {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: #a9745b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #8b5e45;
+  }
+  
+  /* Sección Menú */
+  .menu {
+    padding: 40px 20px;
+    background-color: #f8f1e7;
+    text-align: center;
+  }
+  
+  .menu h1 {
+    font-size: 36px;
+    color: #5c4033;
+    margin-bottom: 40px;
+  }
+  
+  /* Contenedor tipo grid */
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 columnas fijas */
+    gap: 30px;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Cada producto */
+  .menu div {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 250px;
+    transition: transform 0.3s;
+  }
+  
+  .menu div:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Imágenes */
+  .menu img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Texto */
+  .menu p {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #3e2c23;
+  }
+
+  .menu h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #5c4033;
+  }
+  
+  
+  /* Botón */
+  .btn_comprar {
+    background-color: #a9745b;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin-top: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn_comprar:hover {
+    background-color: #8b5e45;
+  }
+  
+  
+  
+  /* Reservaciones */
+  .sect_reserva {
+    padding: 40px 20px;
+    background-color: #f8f1e7;
+  }
+  
+  .sect_reserva input {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #c4b49d;
+    border-radius: 5px;
+  }
+  
+  /* Galería */
+  .sect_galeria {
+    padding: 40px 20px;
+    background-color: #e0d0bd;
+    text-align: center;
+  }
+  
+  /* Mapa */
+  sect_mapa {
+    padding: 40px 20px;
+    background-color: #f1e3d3;
+  }
+  
+  /* Mensaje */
+  .sect_mensaje {
+    padding: 40px 20px;
+    background-color: #e8d7c0;
+  }
+  
+  .sect_mensaje input {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #c4b49d;
+    border-radius: 5px;
+  }
+
+
