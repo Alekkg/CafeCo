@@ -9,103 +9,175 @@
 <body>
     <header>
         <nav class="navbar">
-            <h1 class="logo">Café & Co.</h1>
+            <div id="carrito-container">
+                <span class="icono-carrito">🛒</span>
+                <span id="contador-carrito">0</span>
+            </div>  
+            <button id="toggle-darkmode" class="modo-oscuro-btn">🌙 Modo oscuro</button>
+            <h1 class="logo">Café & Co.</h1>            
             <ul class="nav-links">
-              <li><a href="#nosotros">Menú</a></li>
-              <li><a href="#productos">Reservaciones</a></li>
+              <li><a href="#menu">Menú</a></li>
+              <li><a href="#reservaciones">Reservaciones</a></li>
               <li><a href="#contacto">Contacto</a></li>
             </ul>
-          </nav>
+        </nav>
     </header>
+
     <section class="banner">
-        <h1 class="Titulo_inicial">Bienvenidos a Cafe y Co</h1>
-        <p>Disfruta de nuestro cafe americano</p>
-        <button>Menú</button>
+        <h1 class="Titulo_inicial">Bienvenidos a Café & Co.</h1>
+        <p>Disfruta de nuestro café americano</p>
+        <a href="#menu"><button>Menú</button></a>
     </section>
-    <section class="menu">
-        <div>
-            <h1 class="Titulo_inicial">ME</h1>
+
+    <section class="menu" id="menu">
+        <h1 class="Titulo_inicial">Menú</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Te Chaí</h3>
+                <img src="img/te.avif" alt="Té Chaí">
+                <p>Infusión especiada de origen oriental, perfecta para una tarde tranquila.</p>
+                <p><strong>$3,50</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            <div class="menu-item">
+                <h3>Café</h3>
+                <img src="img/cafe.avif" alt="Café">
+                <p>Café colombiano 100% natural, tostado medio, con aroma intenso y cuerpo suave.</p>
+                <p><strong>$4,50</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            <div class="menu-item">
+                <h3>Granizado</h3>
+                <img src="img/frio.avif" alt="Granizado">
+                <p>Bebida fría con hielo triturado y sabor a café, ideal para refrescarte.</p>
+                <p><strong>$2,50</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            <div class="menu-item">
+                <h3>Pasteles</h3>
+                <img src="img/pan.avif" alt="Pasteles">
+                <p>Recién horneados, con rellenos dulces y salados. Perfectos para acompañar tu bebida.</p>
+                <p><strong>$3,50</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            <div class="menu-item">
+                <h3>Torta</h3>
+                <img src="img/torta.avif" alt="Torta">
+                <p>Porción de torta casera de vainilla o chocolate, con cobertura suave y esponjosa.</p>
+                <p><strong>$2,00</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mousse</h3>
+                <img src="img/mouse.avif" alt="Mousse">
+                <p>Postre ligero y cremoso, disponible en sabores de chocolate o frutos rojos.</p>
+                <p><strong>$5,00</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            <div class="menu-item">
+                <h3>Matcha Latte</h3>
+                <img src="img/matcha.avif" alt="Matcha Latte">
+                <p>Bebida japonesa de té verde molido con leche, cremosa y revitalizante.</p>
+                <p><strong>$4,00</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            
+            <div class="menu-item">
+                <h3>Capuccino</h3>
+                <img src="img/capuccino.avif" alt="Capuccino">
+                <p>Café espresso con leche vaporizada y espuma, clásico y reconfortante.</p>
+                <p><strong>$4,20</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            
+            <div class="menu-item">
+                <h3>Brownie de Chocolate</h3>
+                <img src="img/brownie.avif" alt="Brownie">
+                <p>Bizcocho intenso y húmedo de chocolate, ideal para acompañar tu café.</p>
+                <p><strong>$2,80</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>
+            
+            <div class="menu-item">
+                <h3>Frapuccino de Caramelo</h3>
+                <img src="img/frapuccino.avif" alt="Frapuccino de Caramelo">
+                <p>Bebida fría con café, hielo y crema batida, coronada con sirope de caramelo.</p>
+                <p><strong>$5,00</strong></p>
+                <button class="btn_comprar">Comprar</button>
+            </div>            
         </div>
-        <div>
-            <h3>Te Chaí</h3>
-            <img src="img/te.avif" alt="Té Chaí">
-            <p>Infusión especiada de origen oriental, perfecta para una tarde tranquila.</p>
-            <p><strong>$3,50</strong></p>
-            <button class="btn_comprar">Comprar</button>
-        </div>
-        <div>
-            <h3>Café</h3>
-            <img src="img/cafe.avif" alt="Café">
-            <p>Café colombiano 100% natural, tostado medio, con aroma intenso y cuerpo suave.</p>
-            <p><strong>$4,50</strong></p>
-            <button class="btn_comprar">Comprar</button>
-        </div>
-        <div>
-            <h3>Granizado</h3>
-            <img src="img/frio.avif" alt="Granizado">
-            <p>Bebida fría con hielo triturado y sabor a café, ideal para refrescarte.</p>
-            <p><strong>$2,50</strong></p>
-            <button class="btn_comprar">Comprar</button>
-        </div>
-        <div>
-            <h1 class="Titulo_inicial">NÚ</h1>
-        </div>
-        <div>
-            <h3>Pasteles</h3>
-            <img src="img/pan.avif" alt="Pasteles">
-            <p>Recién horneados, con rellenos dulces y salados. Perfectos para acompañar tu bebida.</p>
-            <p><strong>$3,50</strong></p>
-            <button class="btn_comprar">Comprar</button>
-        </div>
-        <div>
-            <h3>Torta</h3>
-            <img src="img/torta.avif" alt="Torta">
-            <p>Porción de torta casera de vainilla o chocolate, con cobertura suave y esponjosa.</p>
-            <p><strong>$2,00</strong></p>
-            <button class="btn_comprar">Comprar</button>
-        </div>
-        <div>
-            <h3>Mousse</h3>
-            <img src="img/mouse.avif" alt="Mousse">
-            <p>Postre ligero y cremoso, disponible en sabores de chocolate o frutos rojos.</p>
-            <p><strong>$5,00</strong></p>
-            <button class="btn_comprar">Comprar</button>
-        </div>
-    </section>    
-    <section>
-        <img src="" alt="">
-        <h1 class="Titulo_inicial">Visitanos</h1>
     </section>
-    <section class="sect_reserva">
+
+    <section class="sect_reserva" id="reservaciones">
         <h1 class="Titulo_inicial">Reserva</h1>
-        <div>
-            <p>Nombre: <input type="text" name="" id=""></p>
-            <p>Correo electrónico: <input type="text" name="" id=""></p>
-            <p>Fecha: <input type="date" name="" id=""></p>
-            <p>Hora: <input type="number" name="" id=""></p>
-            <p>Numero de Personas: <input type="number"></p>
-            <button class="btn_reserva">Enviar</button>
-        </div>
+        <form id="form_reserva">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+        
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" required>
+        
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+        
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" required>
+        
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" min="1" required>
+        
+            <button type="submit" class="btn_reserva">Enviar</button>
+        </form>
     </section>
+
     <section class="sect_galeria">
-        <p>Galeria</p>
-        <img src="" alt="">
-    </section>
-    <section sect_mapa>
-        <div>mapa</div>
-        <div>
-            <p>Dirección: Cra 100 #30-21</p>
-            <p>Numero: 3229078722</p>
-            <p>Correo: <a href="https://mail.google.com">Correo@gmail.com</a></p>
+        <h2>Galería</h2>
+        <div class="galeria-grid">
+            <img src="img/1.avif" alt="Café 1">
+            <img src="img/mouse.avif" alt="Interior">
+            <img src="img/te.avif" alt="Postres">
+            <img src="img/4.avif" alt="Clientes felices">
+            <img src="img/5.avif" alt="Taza de café">
+            <img src="img/6.avif" alt="Ambiente">
+
         </div>
     </section>
-    <section class="sect_mensaje">
-        <h1>Envianos tu mensaje</h1>
-        <p>Nombre: <input type="text" name="" id=""></p>
-        <p>Correo electrónico: <input type="text" name="" id=""></p>
-        <p>Mensaje: <input type="text" name="" id=""></p>
-        <button class="btn_reserva">Enviar</button>
+
+    <section class="sect_mapa">
+        <h2>Encuéntranos</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <p>Dirección: Cra 100 #30-21</p>
+        <p>Teléfono: 3229078722</p>
+        <p>Email: <a href="mailto:correo@gmail.com">correo@gmail.com</a></p>
     </section>
+
+    <section class="sect_mensaje" id="contacto">
+        <h1>Envianos tu mensaje</h1>
+        <form id="form_mensaje">
+            <label for="nombre_mensaje">Nombre:</label>
+            <input type="text" id="nombre_mensaje" required>
+        
+            <label for="correo_mensaje">Correo electrónico:</label>
+            <input type="email" id="correo_mensaje" required>
+        
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="4" required></textarea>
+        
+            <button type="submit" class="btn_reserva">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Café & Co. Todos los derechos reservados.</p>
+        <p>
+            Síguenos en:
+            <a href="https://www.instagram.com/cafeandco" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/cafeandco" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com/cafeandco" target="_blank">Twitter</a>
+        </p>
+    </footer>
+        
     <script src="script.js"></script>
 </body>
 </html>
+

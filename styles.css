@@ -1,192 +1,502 @@
 /* Estilo general */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f8f1e7; /* beige claro */
-    color: #3e2c23; /* café medio para el texto */
-  }
-  
-  /* Navbar */
-  .navbar {
-    background-color: #5c4033; /* café oscuro */
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-  }
-  
-  .logo {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f1e7;
+  color: #3e2c23;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #5c4033;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #d6a95b;
+}
+
+/* Banner */
+.banner {
+  background-image: url('img/inicio.avif');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.Titulo_inicial {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #a9745b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #8b5e45;
+}
+
+/* Sección Menú */
+.menu {
+  padding: 40px 20px;
+  background-color: #f8f1e7;
+  text-align: center;
+}
+
+.menu h1 {
+  font-size: 36px;
+  color: #5c4033;
+  margin-bottom: 40px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: calc(33% - 20px);
+  max-width: 250px;
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu p {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #3e2c23;
+}
+
+.menu h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #5c4033;
+}
+#carrito-container {
+  position: fixed;
+  top: 200px;
+  right: 30px;
+  background-color: #5c4033;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  font-size: 18px;
+}
+
+.icono-carrito {
+  font-size: 22px;
+}
+
+#contador-carrito {
+  background-color: #a9745b;
+  padding: 3px 8px;
+  border-radius: 50%;
+}
+
+/* Botón modo oscuro */
+.modo-oscuro-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #5c4033;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 999;
+  font-size: 14px;
+}
+
+/* Botón modo oscuro */
+.modo-oscuro-btn {
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  background-color: #5c4033;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 999;
+  font-size: 14px;
+}
+
+
+/* Botón */
+.btn_comprar {
+  background-color: #a9745b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn_comprar:hover {
+  background-color: #8b5e45;
+}
+.popup-mensaje {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #5c4033;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  z-index: 1000;
+  animation: fadeInOut 2.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+
+/* Sección Reservas */
+.sect_reserva {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sect_reserva form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f8f1e7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sect_reserva form label {
+  font-size: 16px;
+  color: #5c4033;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sect_reserva form input,
+.sect_reserva form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.sect_reserva form button {
+  background-color: #a9745b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sect_reserva form button:hover {
+  background-color: #8b5e45;
+}
+
+/* Sección Galería */
+.sect_galeria {
+  background-color: #f8f1e7;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Sección Mapa */
+.sect_mapa {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sect_mapa iframe {
+  border-radius: 15px;
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+}
+
+.sect_mapa p {
+  font-size: 16px;
+  color: #3e2c23;
+}
+
+/* Sección Mensajes */
+/* Sección Mensaje */
+.sect_mensaje {
+  background-color: #f8f1e7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sect_mensaje h1 {
+  font-size: 36px;
+  color: #5c4033;
+  margin-bottom: 30px;
+}
+
+#form_mensaje {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+#form_mensaje label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #5c4033;
+}
+
+#form_mensaje input,
+#form_mensaje textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+#form_mensaje input:focus,
+#form_mensaje textarea:focus {
+  outline: none;
+  border-color: #a9745b;
+}
+
+.btn_reserva {
+  background-color: #a9745b;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn_reserva:hover {
+  background-color: #8b5e45;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .sect_mensaje h1 {
     font-size: 28px;
-    font-weight: bold;
   }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+
+  #form_mensaje {
+    padding: 20px 15px;
   }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+}
+
+
+/* Footer */
+footer {
+  background-color: #5c4033;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #d6a95b;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu-items {
+    justify-content: center;
   }
-  
-  .nav-links li a:hover {
-    color: #d6a95b;
+
+  .menu-item {
+    width: calc(50% - 20px);
   }
-  
-  /* Banner */
+
+  .menu h1 {
+    font-size: 28px;
+  }
+
+  .sect_reserva form,
+  .sect_mensaje form {
+    padding: 15px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+    width: 100%;
+  }
+
+  .menu h1 {
+    font-size: 24px;
+  }
+
   .banner {
-    background-image: url('img/inicio.avif'); 
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
   }
-  
+
   .Titulo_inicial {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 28px;
   }
 
   button {
-    background-color: #a9745b;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-size: 14px;
+    padding: 8px 16px;
   }
-  
-  button:hover {
-    background-color: #8b5e45;
-  }
-  
-  /* Sección Menú */
-  .menu {
-    padding: 40px 20px;
-    background-color: #f8f1e7;
-    text-align: center;
-  }
-  
-  .menu h1 {
-    font-size: 36px;
-    color: #5c4033;
-    margin-bottom: 40px;
-  }
-  
-  /* Contenedor tipo grid */
-  .menu {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 columnas fijas */
-    gap: 30px;
-    justify-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  /* Cada producto */
-  .menu div {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 250px;
-    transition: transform 0.3s;
-  }
-  
-  .menu div:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Imágenes */
-  .menu img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  /* Texto */
-  .menu p {
-    margin: 10px 0 5px;
-    font-size: 16px;
-    color: #3e2c23;
-  }
+}
 
-  .menu h3 {
-    margin: 10px 0;
-    font-size: 20px;
-    color: #5c4033;
-  }
-  
-  
-  /* Botón */
-  .btn_comprar {
-    background-color: #a9745b;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    margin-top: 8px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn_comprar:hover {
-    background-color: #8b5e45;
-  }
-  
-  
-  
-  /* Reservaciones */
-  .sect_reserva {
-    padding: 40px 20px;
-    background-color: #f8f1e7;
-  }
-  
-  .sect_reserva input {
-    padding: 5px;
-    margin: 5px 0;
-    border: 1px solid #c4b49d;
-    border-radius: 5px;
-  }
-  
-  /* Galería */
-  .sect_galeria {
-    padding: 40px 20px;
-    background-color: #e0d0bd;
-    text-align: center;
-  }
-  
-  /* Mapa */
-  sect_mapa {
-    padding: 40px 20px;
-    background-color: #f1e3d3;
-  }
-  
-  /* Mensaje */
-  .sect_mensaje {
-    padding: 40px 20px;
-    background-color: #e8d7c0;
-  }
-  
-  .sect_mensaje input {
-    padding: 5px;
-    margin: 5px 0;
-    border: 1px solid #c4b49d;
-    border-radius: 5px;
-  }
+/* Estilo general del modo oscuro */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Encabezado, nav y secciones */
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode section,
+body.dark-mode footer {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
+
+/* Estilos de tarjetas/menu */
+body.dark-mode .menu-item,
+body.dark-mode .card,
+body.dark-mode .form,
+body.dark-mode .sect_mensaje {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+/* Botones en modo oscuro */
+body.dark-mode .btn_comprar,
+body.dark-mode .btn_reserva,
+body.dark-mode .modo-oscuro-btn {
+  background-color: #a9745b;
+  color: #fff;
+}
+
+body.dark-mode .btn_comprar:hover,
+body.dark-mode .btn_reserva:hover,
+body.dark-mode .modo-oscuro-btn:hover {
+  background-color: #8b5e45;
+}
+
+/* Inputs y textarea */
+body.dark-mode input,
+body.dark-mode textarea,body.dark-mode p {
+  background-color: #444;
+  color: #f0f0f0;
+  border: 1px solid #666;
+}
+
+
+
+
 
 
